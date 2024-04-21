@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddingSuccessfully" xml:space="preserve">
+    <value>تم اضافة الصفحة بنجاح</value>
+  </data>
+  <data name="AddingSuccessfully1" xml:space="preserve">
+    <value>تم اضافة قائمة بنجاح</value>
+  </data>
+  <data name="AddingTitle" xml:space="preserve">
+    <value>اضافة صفحة</value>
+  </data>
+  <data name="AddingTitle1" xml:space="preserve">
+    <value>اضافة قائمة جديدة</value>
+  </data>
+  <data name="ApplicationId" xml:space="preserve">
+    <value>اسم التطبيق</value>
+  </data>
+  <data name="ApplicationIdRequired" xml:space="preserve">
+    <value>يجب إختيار التطبيق</value>
+  </data>
+  <data name="ArabicGroupName" xml:space="preserve">
+    <value>اسم القائمة بالعربية</value>
+  </data>
+  <data name="ArabicGroupNameLength" xml:space="preserve">
+    <value>اسم  القائمة بالعربية لا يتجاوز 35  حرف</value>
+  </data>
+  <data name="ArabicGroupNameRequired" xml:space="preserve">
+    <value>يجب ادخال اسم  القائمة بالعربية</value>
+  </data>
+  <data name="ArabicName" xml:space="preserve">
+    <value>الاسم بالعربي</value>
+  </data>
+  <data name="ArabicPageName" xml:space="preserve">
+    <value>اسم الصفحة بالعربية</value>
+  </data>
+  <data name="ArabicPageNameLength" xml:space="preserve">
+    <value>اسم الصفحة بالعربية لا يتجاوز 35  حرف</value>
+  </data>
+  <data name="ArabicPageNameRequired" xml:space="preserve">
+    <value>يجب ادخال اسم الصفحة بالعربية</value>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>اضافة صفحة جديدة</value>
+  </data>
+  <data name="BtnAdd1" xml:space="preserve">
+    <value>اضافة قائمة جديدة</value>
+  </data>
+  <data name="CanActive" xml:space="preserve">
+    <value>التفعيل</value>
+  </data>
+  <data name="CanCreate" xml:space="preserve">
+    <value>الاضافة</value>
+  </data>
+  <data name="CanDelete" xml:space="preserve">
+    <value>الحذف</value>
+  </data>
+  <data name="CanEdit" xml:space="preserve">
+    <value>التعديل</value>
+  </data>
+  <data name="CanPrint" xml:space="preserve">
+    <value>الطباعة</value>
+  </data>
+  <data name="CanSelect" xml:space="preserve">
+    <value>الاستعراض</value>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>هل أنت متأكد من حذف الصفحة :</value>
+  </data>
+  <data name="DeleteMessage1" xml:space="preserve">
+    <value>هل أنت متأكد من حذف القائمة:</value>
+  </data>
+  <data name="DeleteTitle" xml:space="preserve">
+    <value>حذف صفحة</value>
+  </data>
+  <data name="DeleteTitle1" xml:space="preserve">
+    <value>حذف قائمة</value>
+  </data>
+  <data name="DeletingSuccessfully" xml:space="preserve">
+    <value>تم حذف الصفحة بنجاح</value>
+  </data>
+  <data name="DeletingSuccessfully1" xml:space="preserve">
+    <value>تم حذف القائمة بنجاح</value>
+  </data>
+  <data name="EditingSuccessfully" xml:space="preserve">
+    <value>تم تعديل الصفحة بنجاح</value>
+  </data>
+  <data name="EditingSuccessfully1" xml:space="preserve">
+    <value>تم تعديل القائمة بنجاح</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>تعديل صفحة</value>
+  </data>
+  <data name="EditTitle1" xml:space="preserve">
+    <value>تعديل القائمة</value>
+  </data>
+  <data name="EnglishGroupName" xml:space="preserve">
+    <value>اسم  القائمة بالانجليزية</value>
+  </data>
+  <data name="EnglishGroupNameLength" xml:space="preserve">
+    <value>اسم  القائمة بالانجليزية لا يتجاوز 35 حرف</value>
+  </data>
+  <data name="EnglishGroupNameRequired" xml:space="preserve">
+    <value>يجب ادخال اسم  القائمة بالانجليزية</value>
+  </data>
+  <data name="EnglishPageName" xml:space="preserve">
+    <value>اسم الصفحة بالانجليزية</value>
+  </data>
+  <data name="EnglishPageNameLength" xml:space="preserve">
+    <value>اسم الصفحة بالانجليزية لا يتجاوز 35 حرف</value>
+  </data>
+  <data name="EnglishPageNameRequired" xml:space="preserve">
+    <value>يجب ادخال اسم الصفحة بالانجليزية</value>
+  </data>
+  <data name="GroupIco" xml:space="preserve">
+    <value>أيقونة القائمة</value>
+  </data>
+  <data name="GroupIcoLength" xml:space="preserve">
+    <value>أيقونة القائمة لا يتجاوز 15 حرف</value>
+  </data>
+  <data name="GroupIcoRequired" xml:space="preserve">
+    <value>يجب ادخال أيقونة القائمة</value>
+  </data>
+  <data name="GroupID" xml:space="preserve">
+    <value>اسم القائمة</value>
+  </data>
+  <data name="GroupID1" xml:space="preserve">
+    <value>تسلسل</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>اسم القائمة</value>
+  </data>
+  <data name="GroupNameTextField" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="GroupNameTextField1" xml:space="preserve">
+    <value>ArabicGroupName</value>
+  </data>
+  <data name="GroupOrder" xml:space="preserve">
+    <value>ترتيب القائمة</value>
+  </data>
+  <data name="PageGroupIndex" xml:space="preserve">
+    <value>الترتيب في القائمة</value>
+  </data>
+  <data name="PageID" xml:space="preserve">
+    <value>رقم الصفحة</value>
+  </data>
+  <data name="PageID1" xml:space="preserve">
+    <value>تسلسل</value>
+  </data>
+  <data name="PageIndex" xml:space="preserve">
+    <value>ترتيب الصفحة</value>
+  </data>
+  <data name="PageIndex1" xml:space="preserve">
+    <value>تريب داخل القائمة</value>
+  </data>
+  <data name="PageIndexRequired" xml:space="preserve">
+    <value>ادخل ترتيب الصفحة</value>
+  </data>
+  <data name="PageName" xml:space="preserve">
+    <value>اسم الصفحة</value>
+  </data>
+  <data name="PageNameTextField" xml:space="preserve">
+    <value>ArabicPageName</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>الصفحات</value>
+  </data>
+  <data name="PageTitle1" xml:space="preserve">
+    <value>تعريف القوائم</value>
+  </data>
+  <data name="PageURL" xml:space="preserve">
+    <value>رابط الصفحة</value>
+  </data>
+  <data name="PageURLLength" xml:space="preserve">
+    <value>رابط الصفحة لا يتجاوز 65 حرف</value>
+  </data>
+  <data name="PageURLRequired" xml:space="preserve">
+    <value>يجب ادخال رابط الصفحة</value>
+  </data>
+  <data name="RelatedDataException" xml:space="preserve">
+    <value>لا يمكن حذف الصفحة لوجود بيانات مرتبطة</value>
+  </data>
+  <data name="RelatedDataException1" xml:space="preserve">
+    <value>لا يمكن حذف  القائمة لوجود بيانات مرتبطة</value>
+  </data>
+  <data name="RoleId" xml:space="preserve">
+    <value>رقم الصلاحية</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>الصلاحية</value>
+  </data>
+</root>

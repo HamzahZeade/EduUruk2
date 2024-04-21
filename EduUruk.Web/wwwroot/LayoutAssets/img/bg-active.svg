@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="350" height="76" viewBox="0 0 350 76">
+  <defs>
+    <clipPath id="clip-Artboard_17">
+      <rect width="350" height="76"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_17" data-name="Artboard – 17" clip-path="url(#clip-Artboard_17)">
+    <path id="Union_8" data-name="Union 8" d="M23.722,19.331h110.8V69.622C103.408,69.622,53.983,39.658,23.722,19.331Zm.085,0A190.91,190.91,0,0,1,0,0H346.357a3.651,3.651,0,0,1,2.369,6.42A186.341,186.341,0,0,1,332.98,18.668a3.736,3.736,0,0,1-2.127.662Z" transform="translate(0 -7)" fill="#3ec299" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

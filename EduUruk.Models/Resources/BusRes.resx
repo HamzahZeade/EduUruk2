@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddingSuccessfully" xml:space="preserve">
+    <value>تمت عملية الاضافة بنجاح</value>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>اضافة جديدة</value>
+  </data>
+  <data name="ConutDay" xml:space="preserve">
+    <value>عدد الايام</value>
+  </data>
+  <data name="Conuthours" xml:space="preserve">
+    <value>عدد الساعات</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>منشئ بواسطة</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>تاريخ الانشاء</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DeletingSuccessfully" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
+  <data name="DepartmentId" xml:space="preserve">
+    <value>الادارة المعينة</value>
+  </data>
+  <data name="DepartmentIdRequired" xml:space="preserve">
+    <value>DepartmentIdRequired</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>اسم الادارة</value>
+  </data>
+  <data name="DepartmentNameRequired" xml:space="preserve">
+    <value>اسم الادارة مطلوب إدخاله</value>
+  </data>
+  <data name="DepartmentNote" xml:space="preserve">
+    <value>ملاحظات الادارة</value>
+  </data>
+  <data name="DepartmentNoteLength" xml:space="preserve">
+    <value>DepartmentNoteLength</value>
+  </data>
+  <data name="DepartmentNoteRequired" xml:space="preserve">
+    <value>DepartmentNoteRequired</value>
+  </data>
+  <data name="DepartmentProgress" xml:space="preserve">
+    <value>DepartmentProgress</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="DetailsLength" xml:space="preserve">
+    <value>التفاصيل لا يتجاوز 500 حرف</value>
+  </data>
+  <data name="DetailsRequired" xml:space="preserve">
+    <value>التفاصيل مطلوب ادخالها</value>
+  </data>
+  <data name="EditingSuccessfully" xml:space="preserve">
+    <value>تمت عملية التعديل بنجاح</value>
+  </data>
+  <data name="EscalationTypeID" xml:space="preserve">
+    <value>نوع التصعيد</value>
+  </data>
+  <data name="MeetingsNote" xml:space="preserve">
+    <value>ملاحظات إدارة المتابعة</value>
+  </data>
+  <data name="MeetingsNoteLength" xml:space="preserve">
+    <value>الملاحظات لا تتجاوز 500 حرف</value>
+  </data>
+  <data name="MeetingsNoteRequired" xml:space="preserve">
+    <value>الملاحظات مطلوب ادخالها</value>
+  </data>
+  <data name="MeetingsTaskId" xml:space="preserve">
+    <value>MeetingsTaskId</value>
+  </data>
+  <data name="InboxStatusId" xml:space="preserve">
+    <value>InboxStatusId</value>
+  </data>
+  <data name="InstitutionName" xml:space="preserve">
+    <value>الجهة الوارد منها المعاملة</value>
+  </data>
+  <data name="InstitutionNameLength" xml:space="preserve">
+    <value>الجهة الوارد منها المعاملة لا يتجاوز 100 حرف</value>
+  </data>
+  <data name="InstitutionNameRequired" xml:space="preserve">
+    <value>الجهة الوارد منها المعاملة مطلوب إدخالها</value>
+  </data>
+  <data name="IsCC" xml:space="preserve">
+    <value>نسخة</value>
+  </data>
+  <data name="ModifyBy" xml:space="preserve">
+    <value>التعديل بواسطة</value>
+  </data>
+  <data name="ModifyDate" xml:space="preserve">
+    <value>تاريخ التعديل</value>
+  </data>
+  <data name="NotificationDate" xml:space="preserve">
+    <value>تاريخ التنبيه</value>
+  </data>
+  <data name="NotificationTypeId" xml:space="preserve">
+    <value>نوع التنبيه</value>
+  </data>
+  <data name="NotificationTypeName" xml:space="preserve">
+    <value>اسم نوع التنبيه</value>
+  </data>
+  <data name="NotificationTypeNameLength" xml:space="preserve">
+    <value>اسم نوع التنبيه لا يتجاوز 65 حرف</value>
+  </data>
+  <data name="NotificationTypeNameRequired" xml:space="preserve">
+    <value>اسم نوع التنبيه مطلوب ادخاله</value>
+  </data>
+  <data name="OrgnaizationId" xml:space="preserve">
+    <value>المنظمة</value>
+  </data>
+  <data name="OrgnaizationName" xml:space="preserve">
+    <value>اسم المنظمة</value>
+  </data>
+  <data name="OrgnaizationNameRequired" xml:space="preserve">
+    <value>اسم المنظمة مطلوب ادخاله</value>
+  </data>
+  <data name="PersonId" xml:space="preserve">
+    <value>حامل المشعل</value>
+  </data>
+  <data name="PersonNote" xml:space="preserve">
+    <value>ملاحظات حامل المشعل</value>
+  </data>
+  <data name="PersonNoteLength" xml:space="preserve">
+    <value>ملاحظات لا تتجاوز 500 حرف</value>
+  </data>
+  <data name="PersonNoteRequired" xml:space="preserve">
+    <value>الملاحظات مطلوب ادخالها</value>
+  </data>
+  <data name="progress" xml:space="preserve">
+    <value>نسبة الانجاز</value>
+  </data>
+  <data name="SendType" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>اسم المنظمة مطلوب ادخاله</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="SubjectRequired" xml:space="preserve">
+    <value>SubjectRequired</value>
+  </data>
+  <data name="TaskDate" xml:space="preserve">
+    <value>تاريخ بداية المهمة</value>
+  </data>
+  <data name="TaskDateRequired" xml:space="preserve">
+    <value>تاريخ بداية المهمة مطلوب أدخاله</value>
+  </data>
+  <data name="TaskEndDate" xml:space="preserve">
+    <value>تاريخ نهاية المهمة</value>
+  </data>
+  <data name="TaskEndDateRequired" xml:space="preserve">
+    <value>تاريخ نهاية المهمة مطلوب ادخاله</value>
+  </data>
+  <data name="TaskId" xml:space="preserve">
+    <value>المهمة</value>
+  </data>
+  <data name="TaskIdRequired" xml:space="preserve">
+    <value>TaskIdRequired</value>
+  </data>
+  <data name="TaskNo" xml:space="preserve">
+    <value>رقم المعاملة</value>
+  </data>
+  <data name="TaskNoLength" xml:space="preserve">
+    <value>رقم المعاملة لا يتجاوز 65 حرف</value>
+  </data>
+  <data name="TaskNoRequired" xml:space="preserve">
+    <value>رقم المعاملة مطلوب ادخاله</value>
+  </data>
+  <data name="TaskNote" xml:space="preserve">
+    <value>ملاحظات المهمة</value>
+  </data>
+  <data name="TaskNoteLength" xml:space="preserve">
+    <value>TaskNoteLength</value>
+  </data>
+  <data name="TaskNoteRequired" xml:space="preserve">
+    <value>TaskNoteRequired</value>
+  </data>
+  <data name="TaskPriorityId" xml:space="preserve">
+    <value>درجة الاهمية</value>
+  </data>
+  <data name="TaskPriorityIdRequired" xml:space="preserve">
+    <value>درجة الاهمية مطلوب ادخالها</value>
+  </data>
+  <data name="TaskPriorityName" xml:space="preserve">
+    <value>درجة الاهمية</value>
+  </data>
+  <data name="TaskPriorityNameRequired" xml:space="preserve">
+    <value>درجة الاهمية مطلوب إدخالها</value>
+  </data>
+  <data name="TaskStatusId" xml:space="preserve">
+    <value>حالة المهمة</value>
+  </data>
+  <data name="TaskStatusName" xml:space="preserve">
+    <value>حالة المهمة</value>
+  </data>
+  <data name="TaskStatusNameRequired" xml:space="preserve">
+    <value>حالة المهمة مطلوب ادخالها</value>
+  </data>
+  <data name="TaskSubject" xml:space="preserve">
+    <value>عنوان المهمة</value>
+  </data>
+  <data name="TaskSubjectLength" xml:space="preserve">
+    <value>عنوان المهمة لا يتجاوز 100 حرف</value>
+  </data>
+  <data name="TaskSubjectRequired" xml:space="preserve">
+    <value>عنوان المهمة مطلوب ادخاله</value>
+  </data>
+  <data name="TaskTypeId" xml:space="preserve">
+    <value>نوع المهمة</value>
+  </data>
+  <data name="TaskTypeIdRequired" xml:space="preserve">
+    <value>نوع المهمة مطلوب دخاله</value>
+  </data>
+  <data name="TaskTypeName" xml:space="preserve">
+    <value>نوع المهمة</value>
+  </data>
+  <data name="TaskTypeNameRequired" xml:space="preserve">
+    <value>نوع المهمة مطلوب ادخاله</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="TitleLength" xml:space="preserve">
+    <value>العنوان لا يتجاوز 100 حرف</value>
+  </data>
+  <data name="TitleRequired" xml:space="preserve">
+    <value>العنوان مطلوب ادخاله</value>
+  </data>
+  <data name="Userid" xml:space="preserve">
+    <value>المرسل له</value>
+  </data>
+  <data name="UseridRequired" xml:space="preserve">
+    <value>المرسل له مطلوب ادخاله</value>
+  </data>
+  <data name="userName" xml:space="preserve">
+    <value>المستخدم</value>
+  </data>
+</root>

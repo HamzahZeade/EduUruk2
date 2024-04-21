@@ -1,0 +1,119 @@
+﻿@using EduUruk.Models.Entities;
+@model EduUruk.Models.ViewModels.DocumentUploadModel
+@{
+    var categories = ViewBag.CategoryLibraries as List<CategoryLibrary>; // Retrieve categories from ViewBag
+}
+<form asp-action="Upload" asp-controller="Document" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Title">Title:</label>
+        <input type="text" id="Title" name="Title" class="form-control" asp-for="Title">
+    </div>
+    <div class="form-group">
+        <label for="Description">Description:</label>
+        <textarea id="Description" name="Description" class="form-control" asp-for="Description"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="LibraryType">Document Type:</label>
+        <select id="LibraryType" name="LibraryType" class="form-control" asp-for="LibraryType">
+            <option value="Book">Book</option>
+            <option value="Summary">Summary</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Status Document :</label><br />
+        <input type="checkbox" id="StatusDocumentNew" name="StatusDocument" value="New" />
+        <label for="StatusDocumentNew">New</label><br />
+        <input type="checkbox" id="StatusDocumentUsed" name="StatusDocument" value="Used" />
+        <label for="StatusDocumentUsed">Used</label>
+    </div>
+
+    <div class="form-group">
+        <label>Price Type :</label><br />
+        <input type="radio" id="PriceTypePrice" name="PriceType" value="price" />
+        <label for="PriceTypePrice">Price</label><br />
+        <input type="radio" id="PriceTypeFree" name="PriceType" value="Free" checked />
+        <label for="PriceTypeFree">Free</label>
+    </div>
+
+    <div class="form-group" id="priceInput" style="display: none;">
+        <label for="Price">Price:</label>
+        <input type="number" id="Price" name="Price" class="form-control" asp-for="Price" step="0.00" required />
+    </div>
+    <div class="form-group">
+        <label for="CategoryId">Category:</label>
+        <select id="CategoryLibraryId" name="CategoryLibraryId" class="form-control" asp-for="CategoryLibraryId">
+            <option value="">Select a category</option>
+            @foreach (var category in categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="DocumentFile">Select Document:</label>
+        <input type="file" id="DocumentFile" name="DocumentFile" class="form-control-file" asp-for="DocumentFile">
+    </div>
+
+    <div class="form-group" id="BookCoverFormGroup">
+        <label for="BookCover">Select Book Cover:</label>
+        <input type="file" id="BookCover" name="BookCover" class="form-control-file" asp-for="BookCover">
+    </div>
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="form-group">
+            <label>Is Active:</label>
+            <input type="checkbox" id="IsActive" name="IsActive" value="false" />
+            <label for="IsActive">Active</label>
+        </div>
+    }
+ 
+
+    <button type="submit" class="btn btn-primary">Upload Document</button>
+</form>
+<script>
+    function toggleBookCover() {
+        var libraryType = document.getElementById("LibraryType").value;
+        var bookCoverInput = document.getElementById("BookCoverFormGroup");
+
+        if (libraryType === "Book") {
+            bookCoverInput.style.display = "block";
+        } else {
+            bookCoverInput.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        toggleBookCover(); // Call the function initially to set the initial state
+        document.getElementById("LibraryType").addEventListener("change", toggleBookCover);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const priceTypePrice = document.getElementById('PriceTypePrice');
+        const priceTypeFree = document.getElementById('PriceTypeFree');
+        const priceInput = document.getElementById('priceInput');
+
+        priceTypePrice.addEventListener('change', function () {
+            if (this.checked) {
+                priceInput.style.display = 'block';
+                priceInput.querySelector('input').setAttribute('required', 'required');
+            }
+        });
+
+        priceTypeFree.addEventListener('change', function () {
+            if (this.checked) {
+                priceInput.style.display = 'none';
+                priceInput.querySelector('input').removeAttribute('required');
+            }
+        });
+
+        // Check the initial value to show/hide the Price input and set required attribute
+        if (priceTypePrice.checked) {
+            priceInput.style.display = 'block';
+            priceInput.querySelector('input').setAttribute('required', 'required');
+        }
+    });
+</script>

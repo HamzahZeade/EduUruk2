@@ -1,0 +1,41 @@
+﻿
+
+@using EduUruk.Models.Entities;
+@model EduUruk.Models.ViewModels.VideoUploadModel
+@{
+    var categories = ViewBag.Categories as List<Category>; // Retrieve categories from ViewBag
+}
+
+<form asp-action="Upload" asp-controller="Video" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Title">Title:</label>
+        <input type="text" id="Title" name="Title" class="form-control" asp-for="Title">
+    </div>
+    <div class="form-group">
+        <label for="Description">Description:</label>
+        <textarea id="Description" name="Description" class="form-control" asp-for="Description"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="CategoryId">Category:</label>
+        <select id="CategoryId" name="CategoryId" class="form-control" asp-for="CategoryId">
+            <option value="">Select a category</option>
+            @foreach (var category in categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="VideoFile">Select Video:</label>
+        <input type="file" id="VideoFile" name="VideoFile" class="form-control-file" asp-for="VideoFile">
+    </div>
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="form-group">
+            <label>Is Active:</label>
+            <input type="checkbox" id="IsActive" name="IsActive" value="false" />
+            <label for="IsActive">Active</label>
+        </div>
+    }
+    <button type="submit" class="btn btn-primary">Upload Video</button>
+</form>

@@ -1,0 +1,286 @@
+﻿@using EduUruk.Models.Entities;
+@using EduUruk.Models.Auth_Tables;
+@using Microsoft.AspNetCore.Identity
+@model Dictionary<Category, List<Video>>
+@inject SignInManager<User> SignInManager
+<h1>Videos by Categories</h1>
+<div class="content">
+    <div class="container">
+        <div class="row d-flex flex-row flex-wrap align-items-stretch">
+            @foreach (var categoryVideos in Model)
+            {
+                <h2>@categoryVideos.Key.Name</h2>
+                @foreach (var item in categoryVideos.Value)
+                {
+                    <div class="col-sm-12 col-md-4 col-lg-3 py-3">
+                        <div class="border card-shadow text-center">
+                            <div class="p-3">
+                                <div class="col">
+                                    <div data-src-id="@item.Url" data-thumb-id="@item.Id" data-description="@item.Description" class="img-thumbnail-ML text-center rounded-4" style="background-color: #f7f5f5; background-image: url('@Url.Action("DownloadFile", "VideosLibrary", new { id = item.Id })'); background-size: 100% 100%;">
+                                        <img src="~/icon/video.svg" class="mw-100 py-20" alt="" style="margin: 71px 0px;height: 140px;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex px-4 justify-content-start">
+                                <span class="fs-6 fw-bold px-2">
+                                    @Html.Raw(@item.Title)
+                                </span>
+                            </div>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <!-- Add comment input -->
+                                <form asp-action="AddComment" asp-controller="VideosLibrary">
+                                    <input type="hidden" name="videoId" value="@item.Id" />
+                                    <textarea name="commentText" rows="3"></textarea>
+                                    <button type="submit">Add Comment</button>
+                                </form>
+                                <!-- Display comments -->
+                                <h3>Comments</h3>
+                                @foreach (var comment in item.Comments)
+                                {
+                                    <div>
+                                        <span>@comment.User.UserName:</span>
+                                        <span>@comment.Text</span>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <p>Please <a href="/Account/Login">log in</a> to view and add comments.</p>
+                            }
+                        
+                            <div class="d-flex mb-2 me-4 justify-content-end">
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<!-- /.modal -->
+
+<div id="AccessSection">
+</div>
+
+<div class="modal fade" tabindex="-1" id="kt_modal_file_view">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"></h3>
+
+                <!--begin::Close-->
+                <div class="model-btn-close btn btn-icon btn-sm btn-active-light-primary ms-2">
+                    <span class="svg-icon svg-icon-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+                            <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+                        </svg>
+                    </span>
+                </div>
+                <!--end::Close-->
+            </div>
+
+            <div class="mediaContentView modal-body">
+            </div>
+
+            <div class="row modal-footer m-0">
+                <div class="d-flex justify-content-between">
+
+                    <div class="d-flex">
+                        <button type="button" class="model-btn-cancel btn btn-light">إغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+    <script>
+
+
+
+        function FireAccess() {
+            debugger;
+
+            $('#AccessModal').modal('show');
+
+
+
+        }
+
+        function CloseModel(data) {
+            $('#AccessModal').modal('hide');
+            swal({
+                title: data.title,
+                text: data.message,
+                icon: data.status,
+                type: data.status,
+                confirmButtonClass: data.btnclass,
+                confirmButtonText: "موافق",
+                showConfirmButton: 1,
+
+            })
+
+
+            if (data.status == "success") {
+                setTimeout(function () {
+                    window.location.reload();
+                }, 3000)
+            }
+        }
+
+
+        $(document).on("change", ".memType", function () {
+            debugger;
+            $("#MemberTypeId").val($(this).val());
+
+        });
+
+
+        
+
+
+    </script>
+
+
+
+   
+
+
+
+
+
+
+
+
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+
+
+
+
+    <script>
+
+        var KTMediaLibraryView = function () {
+            var mediaContentView;
+            var mlFileViewModelEL;
+            var mlFileViewModel;
+            var mlFileViewModelTitle;
+            var mlFolderCurrent;
+            var lang;
+
+            var initMediaLibraryThumbnail = () => {
+                document.querySelectorAll(".img-thumbnail-ML").forEach(function (element) {
+                    element.addEventListener('click', function () {
+                        var description = element.getAttribute("data-description");
+                        showMediaFile(element.getAttribute("data-src-id"), element.getAttribute("data-thumb-id"), description);
+                    });
+                });
+            }
+
+            var initMediaLibraryModel = () => {
+                mlFileViewModelTitle = document.querySelector('.modal-title');
+                mlFileViewModelEL = document.querySelector('#kt_modal_file_view');
+                if (mlFileViewModelEL) {
+                    mlFileViewModel = new bootstrap.Modal(mlFileViewModelEL, {
+                        backdrop: 'static',
+                        keyboard: false
+                    });
+                }
+                document.querySelector('.model-btn-close').addEventListener('click', function () {
+                    mediaContentView.innerHTML = "";
+                    mlFileViewModel.hide();
+                });
+                document.querySelector('.model-btn-cancel').addEventListener('click', function () {
+                    mediaContentView.innerHTML = "";
+                    mlFileViewModel.hide();
+                });
+
+             
+            }
+
+            var showMediaFile = (value, thumb, description) => {
+
+                console.log("thumb ", thumb)
+                console.log("value ", value)
+               
+                mediaContentView.innerHTML =
+                    `<div class="col-12">
+                                            <video id="player" controls crossorigin playsinline width="100%"
+                                                                                                            data-poster="/VideosLibrary/Download?id=${thumb}">
+                                                                                    <source src="/VideosLibrary/Download?id=${thumb}" type="video/mp4" size="576" />
+                                            </video>
+                                        </div>
+                                                   <div  class="fw-bold px-3 pt-3"> الوصف</div>
+                                                                                         <div id="videoDescription" class="p-3"> ${description}"</div>
+                                        `;
+               
+                mlFileViewModel.show();
+                //    },
+                //    error: function (result) { }
+                //});
+            }
+
+            return {
+                init: function () {
+                    lang = "ar-SA";
+                    mediaContentView = document.querySelector('.mediaContentView');
+
+                    initMediaLibraryThumbnail();
+                    initMediaLibraryModel();
+                }
+            }
+        }();
+
+        $(document).ready(function () {
+            KTMediaLibraryView.init();
+        })
+
+    </script>
+
+        }
+
+
+<script>
+    $(document).ready(function () {
+        // Function to handle comment submission
+        $('#commentForm').submit(function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = $(this);
+            var formData = form.serialize(); // Serialize the form data
+
+            // AJAX POST request to submit the comment
+            $.ajax({
+                url: form.attr('action'), // Action URL from the form
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    // Clear the textarea after successful submission
+                    form.find('textarea[name="commentText"]').val('');
+
+                    // Append the new comment to the comments section
+                    $('#commentsSection').append(response);
+                },
+                error: function () {
+                    // Handle errors if needed
+                    alert('Error submitting comment.');
+                }
+            });
+        });
+
+        // Initialize the media library view
+        KTMediaLibraryView.init();
+    });
+</script>

@@ -1,0 +1,81 @@
+/*
+      www.OnlineWebFonts.Com 
+      You must credit the author Copy this link on your web 
+      <div>Font made from <a href="http://www.onlinewebfonts.com/fonts">Web Fonts</a>is licensed by CC BY 4.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com/fonts">Web Fonts</a>
+
+      CSS rules to specify fonts
+
+      font-family: "DIN Next LT Arabic Bold";
+      font-family: "DIN Next LT Arabic Light";
+      font-family: "DIN Next LT Arabic Heavy";
+      font-family: "DIN Next LT Arabic Medium";
+      ;
+
+*/
+
+@font-face{
+  font-family: "DIN Next LT Arabic Light";
+  src: url("DINNextLTArabicLight/DINNextLTArabicLight.eot");
+  src: url("DINNextLTArabicLight/DINNextLTArabicLight.eot?#iefix")format("embedded-opentype"),
+      url("DINNextLTArabicLight/DINNextLTArabicLight.woff")format("woff"),
+      url("DINNextLTArabicLight/DINNextLTArabicLight.woff2")format("woff2"),
+      url("DINNextLTArabicLight/DINNextLTArabicLight.ttf")format("truetype"),
+      url("DINNextLTArabicLight/DINNextLTArabicLight.svg#DIN Next LT Arabic Light")format("svg");
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family: "DIN Next LT Arabic Regular";
+  src: url("DINNextLTArabicRegular/DINNextLTArabicRegular.eot");
+  src: url("DINNextLTArabicRegular/DINNextLTArabicRegular.eot?#iefix")format("embedded-opentype"),
+      url("DINNextLTArabicRegular/DINNextLTArabicRegular.woff")format("woff"),
+      url("DINNextLTArabicRegular/DINNextLTArabicRegular.woff2")format("woff2"),
+      url("DINNextLTArabicRegular/DINNextLTArabicRegular.ttf")format("truetype"),
+      url("DINNextLTArabicRegular/DINNextLTArabicRegular.svg#DIN Next LT Arabic Regular")format("svg");
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family: "DIN Next LT Arabic Medium";
+  src: url("DINNextLTArabicMedium/DINNextLTArabicMedium.eot");
+  src: url("DINNextLTArabicMedium/DINNextLTArabicMedium.eot?#iefix")format("embedded-opentype"),
+      url("DINNextLTArabicMedium/DINNextLTArabicMedium.woff")format("woff"),
+      url("DINNextLTArabicMedium/DINNextLTArabicMedium.woff2")format("woff2"),
+      url("DINNextLTArabicMedium/DINNextLTArabicMedium.ttf")format("truetype"),
+      url("DINNextLTArabicMedium/DINNextLTArabicMedium.svg#DIN Next LT Arabic Medium")format("svg");
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family: "DIN Next LT Arabic Bold";
+  src: url("DINNextLTArabicBold/DINNextLTArabicBold.eot");
+  src: url("DINNextLTArabicBold/DINNextLTArabicBold.eot?#iefix")format("embedded-opentype"),
+      url("DINNextLTArabicBold/DINNextLTArabicBold.woff")format("woff"),
+      url("DINNextLTArabicBold/DINNextLTArabicBold.woff2")format("woff2"),
+      url("DINNextLTArabicBold/DINNextLTArabicBold.ttf")format("truetype"),
+      url("DINNextLTArabicBold/DINNextLTArabicBold.svg#DIN Next LT Arabic Bold")format("svg");
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family: "DIN Next LT Arabic Heavy";
+  src: url("DINNextLTArabicHeavy/DINNextLTArabicHeavy.eot");
+  src: url("DINNextLTArabicHeavy/DINNextLTArabicHeavy.eot?#iefix")format("embedded-opentype"),
+      url("DINNextLTArabicHeavy/DINNextLTArabicHeavy.woff")format("woff"),
+      url("DINNextLTArabicHeavy/DINNextLTArabicHeavy.woff2")format("woff2"),
+      url("DINNextLTArabicHeavy/DINNextLTArabicHeavy.ttf")format("truetype"),
+      url("DINNextLTArabicHeavy/DINNextLTArabicHeavy.svg#DIN Next LT Arabic Heavy")format("svg");
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}

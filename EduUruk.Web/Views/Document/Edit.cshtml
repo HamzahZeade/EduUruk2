@@ -1,0 +1,101 @@
+﻿@using EduUruk.Models.Entities;
+@model Library
+
+@{
+    var categories = ViewBag.CategoryLibraries as List<CategoryLibrary>; // Retrieve categories from ViewBag
+}
+<h1>Edit Library</h1>
+
+<form asp-controller="Document" asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="FilePath" />
+
+
+    <div class="form-group">
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="CategoryId">Category:</label>
+        <select id="CategoryLibraryId" name="CategoryLibraryId" class="form-control" asp-for="CategoryLibraryId">
+            <option value="">Select a category</option>
+            @foreach (var category in categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Description">Description:</label>
+        <textarea id="Description" name="Description" class="form-control" asp-for="Description"></textarea>
+    </div>
+        <div class="form-group">
+        <label>Library Type</label>
+        <select asp-for="LibraryType" class="form-control">
+            <option value="Book">Book</option>
+            <option value="Summary">Summary</option>
+        </select>
+        <span asp-validation-for="LibraryType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Status Document :</label><br />
+        <input type="radio" id="StatusDocumentNew" name="StatusDocument" value="New" @(Model.StatusDocument.ToString() == "New" ? "checked" : "") />
+        <label for="StatusDocumentNew">New</label><br />
+        <input type="radio" id="StatusDocumentUsed" name="StatusDocument" value="Used" @(Model.StatusDocument.ToString() == "Used" ? "checked" : "") />
+        <label for="StatusDocumentUsed">Used</label>
+    </div>
+
+    <div class="form-group">
+        <label>Price Type :</label><br />
+        <input type="radio" id="PriceTypePrice" name="PriceType" value="price" @(Model.PriceType.ToString() == "price" ? "checked" : "") />
+        <label for="PriceTypePrice">Price</label><br />
+        <input type="radio" id="PriceTypeFree" name="PriceType" value="Free" @(Model.PriceType.ToString() == "Free" ? "checked" : "") />
+        <label for="PriceTypeFree">Free</label>
+    </div>
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="form-group">
+            <label>Is Active:</label>
+            <input type="checkbox" id="IsActive" name="IsActive" value="true" @(Model.IsActive == true ? "checked" : false) />
+            <label for="IsActive">Active</label>
+        </div>
+    }
+  
+    <div id="priceField" class="form-group" style="display: none;">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" id="Price" class="form-control" step="0.00" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const priceTypePrice = document.getElementById('PriceTypePrice');
+            const priceField = document.getElementById('priceField');
+
+            priceTypePrice.addEventListener('change', function () {
+                if (priceTypePrice.checked) {
+                    priceField.style.display = 'block';
+                    document.getElementById('Price').required = true;
+                } else {
+                    priceField.style.display = 'none';
+                    document.getElementById('Price').required = false;
+                }
+            });
+
+            // Check initial state on page load
+            if (priceTypePrice.checked) {
+                priceField.style.display = 'block';
+                document.getElementById('Price').required = true;
+            } else {
+                priceField.style.display = 'none';
+                document.getElementById('Price').required = false;
+            }
+        });
+    </script>
+}

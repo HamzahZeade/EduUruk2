@@ -1,0 +1,275 @@
+﻿@{
+    ViewBag.Title = SysModelRes.PageTitle;
+}
+@section Styles {
+   @* <link href="/Content/Shared/jquery-ui.min.css" rel="stylesheet" />
+    <link href="/Content/Shared/ui-elements.css" rel="stylesheet" />*@
+    <style>
+      /*  .ui-front{
+            z-index:9999 !important
+        }*/
+    </style>
+}
+@section breadcrumb{
+<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+    <!--begin::Item-->
+    <li class="breadcrumb-item text-white opacity-75">
+        <a href="/Home/Index" class="text-white text-hover-primary">الرئيسية</a>
+    </li>
+    <li class="breadcrumb-item">
+        <span class="bullet bg-white opacity-75 w-5px h-2px"></span>
+    </li>
+    <li class="breadcrumb-item text-white opacity-75">@SysModelRes.PageTitle</li>
+</ul>
+}
+<!-- Page-Title -->
+@*<div class="row">
+    <div class="col-sm-12">
+        <div class="btn-group pull-right m-t-15">
+            <a class="btn btn-primary waves-effect waves-light" data-ajax="true" data-ajax-loading="#loader"
+               data-ajax-loading-duration="100" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="FirewithImg"
+               data-ajax-update="#AccessSection" href="/Admin/Users/Create">
+                <i class="fa fa-plus"></i> @SysModelRes.BtnAdd
+            </a>
+        </div>
+        <h4 class="page-title">@SysModelRes.PageTitle</h4>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">@GeneralRes.HomePageTitle</a></li>
+            <li class="breadcrumb-item active">@SysModelRes.PageTitle</li>
+        </ol>
+    </div>
+</div>*@
+   
+<div class="row">
+    <div class="col-12">
+        <div class="card card-xl-stretch mb-5 mb-xl-8">
+            <!--begin::Header-->
+            <div class="card-header border-0 pt-5">
+                <h3 class="card-title align-items-start flex-column">
+                    <span class="card-label fw-bolder fs-3 mb-1">@SysModelRes.PageTitle</span>
+                </h3>
+                <div class="card-toolbar">
+                    <a class="btn btn-sm btn-info create" data-ajax="true" data-ajax-loading="#loader"
+                       data-ajax-loading-duration="100" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="FirewithImg"
+                       data-ajax-update="#AccessSection" href="Create">
+                        <i class="fa fa-plus"></i>@GeneralRes.BtnNewText
+                    </a>
+                </div>
+            </div>
+            <div class="card-body py-3">
+                <div class="card-box table-responsive table-hover table-bordered">
+                    <table class="table table-actions-bar table-striped table-bordered dt-responsive nowrap" data-rel="dashbord" cellspacing="0" width="100%"></table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- end row -->
+@section Scripts {
+    @*<script src="/Scripts/Shared/jquery-ui.min.js"></script>*@
+
+<script type="text/javascript">
+
+    function FirewithImg() {
+        fileUploadFileName = $('[data-rel="imgControl"]').val();
+        FireAccess();
+        //$("#DepartmentID").change(function () {
+        //    var deptId = 0;
+        //    if (typeof $("#DepartmentID > option:selected").attr("value") != 'undefined') {
+        //        deptId = $("#DepartmentID > option:selected").attr("value");
+        //    }
+        //    deptId = deptId == '' ? 0 : deptId;
+        //    var emp = $("#UserID").val();
+        //    //console.log(deptId)
+        //    $.getJSON("/Users/GetByDepartment/?id=" + deptId + "&empId=" + emp, function (data) {
+        //        var items = "";
+        //        $.each(data, function (i, state) {
+        //            items += "<option value='" + state.Value + "'>" + state.Text + "</option>";
+        //        });
+        //        $("#ManagerID").html(items);
+        //        $("#ManagerID").select2("destroy");
+        //        $("#ManagerID").select2({ minimumResultsForSearch: 8, width: '100%' });
+        //    });
+
+        //});
+    }
+
+    $(document).ready(function () {
+
+        fileUploadUrl = "/Users/UploadImage";
+        fileUploadPath = "/Images/Users/";
+        fileUploadText = "@SysModelRes.UploadText";
+
+        var tableSettings = {
+            url: "/Admin/Users/GetCustoms",
+            language: "@GeneralRes.Language",
+            sorting: [[0, 'asc']],
+            columns: [
+
+               {
+                   'width': "30%",
+                   'data': "name",
+                   'name': "@SysModelRes.UserNameTextField",
+                   'title': "@SysModelRes.UserName",
+               },
+                {
+                   'width': "10%",
+                   'data': "username",
+                   'name': "@SysModelRes.UserNameTextField",
+                   'title': "@SysModelRes.UserName",
+               },
+               {
+                   'width': "20%",
+                   'data': "email",
+                   'name': "Email",
+                   'title': "@SysModelRes.Email"
+               },
+                 {
+                   'width': "30%",
+                   'data': "mobile",
+                   'name': "PhoneNumber",
+                   'title': "الجوال",
+               },
+                 {
+                   'width': "30%",
+                   'data': "job_title",
+                   'name': "JobTitle",
+                   'title': "@BusRes.JobTitle",
+               },
+                {
+                   'width': "30%",
+                   'data': "org",
+                   'name': "Org",
+                   'title': "@BusRes.OrgnaizationName",
+               },
+                {
+                   'orderable': false,
+                   'width': "10%",
+                   'data': "use_local_pass",
+                   'name': "PhoneNumber",
+                   'title': "الدخول",
+               },
+                {
+                   'orderable': false,
+                   'width': "10%",
+                   'data': "is_active",
+                   'name': "PhoneNumber",
+                   'title': "الحالة",
+                     'render': function (is_active, type, row) {
+                       var command = '';
+                       command=is_active;
+                       return command;
+
+                   }
+               },
+                {
+                   'orderable': false,
+                   'width': "10%",
+                   'data': "req_change_pass",
+                   'name': "PhoneNumber",
+                   'title': "كلمة المرور",
+               },
+               {
+                   'width': "30%",
+                   'orderable': false,
+                   'data': "roles",
+                   'name': "roles",
+                   'title': "الصلاحيات",
+                   'render': function (roles, type, row) {
+                       var command = '';
+                       //debugger;
+                        for(var i=0;i<roles.length ; i++){
+                            command += roles[i]+'<br>';
+                       }
+                       return command;
+
+                   }
+               },
+               {
+                   'width': "20%",
+                   'orderable': false,
+                   'data': 'id',
+                   "class":"all",
+                   'render': function (id, type, row) {
+                       var command = '<div class="action-buttons">';
+
+                       command += '<a class="btn btn-info btn-sm" data-ajax="true" data-ajax-loading="#loader" data-ajax-loading-duration="100" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="FirewithImg" data-ajax-update="#AccessSection" href="/Admin/Users/Edit/' + id + '" ><i class="fa fa-pen"> </i></a> ';
+                      
+                       
+                      command += '<a class="btn btn-warning btn-sm SendSMS"  href="#" data-id="' + id + '" ><i class="fa fa-lock"> </i></a> ';
+                       command += '<a class="btn btn-primary btn-sm"  data-ajax="true" data-ajax-loading="#loader" data-ajax-loading-duration="100" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="FirewithImg" data-ajax-update="#AccessSection" href="../../../../Admin/manageUsers/JournalEmail/' + id + '" ><i class="fa fa-envelope"> </i></a> ';
+
+                       command += '<a class="btn btn-danger btn-sm" data-ajax="true" data-ajax-loading="#loader" data-ajax-loading-duration="100" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="FireAccess" data-ajax-update="#AccessSection" href="/Admin/Users/Delete/' + id + '" ><i class="fa fa-trash"> </i></a>';
+
+                       command += '</div>';
+                        command += '<br><span class="badge badge-light-success">' + row.has_send_sms+ '</span>';
+
+                       return command;
+                   }
+               }
+            ]
+        };
+        setTable(tableSettings);
+
+
+     $(document).on("click", '.SendSMS', function () {
+         var id = $(this).data('id');
+          swal.fire({
+                   title: "تأكيد ارسال",
+                   text: "تأكيد ارسال رسالة نصية للمستخدم",
+                   icon: "warning",
+                   showCancelButton: true,
+                   buttons: 
+                   {
+                       cancel: {
+                           text: "الغاء",
+                           value: false,
+                           visible: true,
+                           className: "btn-warning",
+                           closeModal: false,
+                       },
+                       confirm: {
+                           text: "تأكيد ",
+                           value: true,
+                           visible: true,
+                           className: "btn-success",
+                           closeModal: false
+                       }
+                   }
+               }).then(result => {
+                   //debugger;
+                   if (result.isConfirmed) {
+                       $.ajax({
+                            url: "../../../../../Admin/Users/SendSMS",
+                            type: "POST",
+                            dataType: "json",
+                            data: {
+                                id: id
+                            },
+                            success: function (data) {
+                                  swal.fire({
+                                        title: data.title,
+                                        text: data.message,
+                                        icon: data.status,
+                                        type: data.status,
+                                        confirmButtonClass: data.btnclass,
+                                        confirmButtonText: data.btntext,
+                                        showConfirmButton: 0,
+                                        timer: 3000
+                                        });
+                            },
+                            error: function (result) {
+                                alert("عذرا ، هناك خطأ في النداء")
+                            }
+                        });
+                   } else {
+                   }
+               })
+     });
+
+    });
+</script>
+
+}
+

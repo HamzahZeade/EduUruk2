@@ -1,0 +1,29 @@
+﻿@model List<EduUruk.Models.Auth_Tables.Page>
+
+<!--begin::Breadcrumb-->
+<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+
+    <!--begin::Item-->
+    @if (Model != null && Model.Count > 0)
+    {
+        <li class="breadcrumb-item text-white opacity-75">@Model[0].Group.ArabicGroupName</li>
+    }
+   @* <li class="breadcrumb-item text-white opacity-75">@Model[0].Group.ArabicGroupName</li>*@
+    <!--end::Item-->
+
+    @foreach (var item in Model)
+    {
+        <!--begin::Item-->
+        <li class="breadcrumb-item">
+            <span class="bullet bg-white opacity-75 w-5px h-2px"></span>
+        </li>
+        <!--end::Item-->
+
+        <!--begin::Item-->
+        <li class="breadcrumb-item text-white opacity-75">
+            <a href="@item.PageURL" class="text-white text-hover-primary">@item.ArabicPageName</a>
+        </li>
+        <!--end::Item-->
+    }
+</ul>
+<!--end::Breadcrumb-->

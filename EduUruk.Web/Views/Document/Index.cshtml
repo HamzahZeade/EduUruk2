@@ -1,0 +1,42 @@
+﻿@using EduUruk.Models.Entities;
+@model List<Library>
+<h1>Documants</h1>
+<a asp-controller="Document" asp-action="Upload">Add New Document</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>File Path</th>
+            <th>Type</th>
+            <th>Document Type</th>
+            <th>Category</th>
+            <th>Status Document</th>
+            <th>Price Type</th>
+            <th>Price</th>
+            <th>IsActive</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lib in Model)
+        {
+            <tr>
+                <td>@lib.Title</td>
+                <td>@lib.FilePath</td>
+                <td>@lib.Type</td>
+                <td>@lib.LibraryType</td>
+                <td>@lib.CategoryLibrary.Name</td>
+                <td>@lib.StatusDocument</td>
+                <td>@lib.PriceType</td>
+                <td>@lib.Price</td>
+                <td>@lib.IsActive</td>
+                <td>
+                    <a asp-controller="Document" asp-action="Edit" asp-route-id="@lib.Id">Edit</a> |
+                    <a asp-controller="Document" asp-action="Delete" asp-route-id="@lib.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -1,0 +1,33 @@
+﻿@using EduUruk.Models.Entities;
+@model List<Video>
+<h1>Videos</h1>
+<a asp-controller="Video" asp-action="Upload">Add New Video</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>URL</th>
+            <th>Category</th>
+            <th>IsActive</th>
+            <th>Actions</th>
+        
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var video in Model)
+        {
+            <tr>
+                <td>@video.Title</td>
+                <td>@video.Url</td>
+                <td>@video.Category.Name</td>
+                <td>@video.IsActive</td>
+                <td>
+                    <a asp-controller="Video" asp-action="Edit" asp-route-id="@video.Id">Edit</a> |
+                    <a asp-controller="Video" asp-action="Delete" asp-route-id="@video.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

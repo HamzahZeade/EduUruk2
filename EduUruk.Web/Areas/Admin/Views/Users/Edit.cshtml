@@ -1,0 +1,94 @@
+﻿@model EduUruk.Models.ViewModels.UserForm
+
+<!-- modal -->
+<div id="AccessModal" class="modal fade"  data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form action="/Admin/Users/Edit" 
+    autocomplete="off" class="modal-dialog modal-lg" 
+    data-ajax="true" data-ajax-loading="#loader" data-ajax-loading-duration="100" data-ajax-method="POST" data-ajax-success="CloseModel" 
+    enctype="multipart/form-data" id="form0" 
+    method="post" 
+    novalidate="novalidate">
+    
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.UserId)
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">@EduUruk.Models.Resources.SysModelRes.EditTitle</h4>
+                <button type="button" class="close" data-bs-dismiss="modal"  aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+       @*         <div class="row">
+                     
+                            <div class="col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.Photo, new Dictionary<string, object> { { "data-rel", "imgControl" }, { "class", "hidden-input " } })
+                                    @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
+                                    <div id="imageInput" class="upload-container" data-rel="imgContent"></div>
+                                    <input type="file" data-rel="upload" id="fileUpload" />
+                                </div>
+                            </div>
+                       </div>*@
+                    <div class="row">
+                             <div class="form-group col-md-6">
+                                        <label class="text-bold-900">@Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label" }) </label>
+                                        <small class="text-danger">*</small>
+                                        <div class="position-relative has-icon-left">
+                            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                                            
+                                            <div class="form-control-position">
+                                               
+                                            </div>
+                                        </div>
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                    </div>
+                        </div>
+                         <div class="row">
+                               <div class="form-group col-md-6">
+                                        <label class="text-bold-900">@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" }) </label>
+                                        <small class="text-danger">*</small>
+                                        <div class="position-relative has-icon-left">
+
+                                             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                           
+                                            <div class="form-control-position">
+                                               
+                                            </div>
+                                        </div>
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                         </div>
+
+  
+                <div class="row">
+                  <div class="form-group col-md-6">
+                                        <label class="text-bold-900">@Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label" }) </label>
+                                        <small class="text-danger">*</small>
+                                        <div class="position-relative has-icon-left">
+
+                                             @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                                           
+                                            <div class="form-control-position">
+                                                <i class=" icon-user"></i>
+                                            </div>
+                                        </div>
+                                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                    </div>
+                </div>
+
+            </div>
+         
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default waves-effect waves-light">
+                    <i class="fa fa-user-plus"></i>
+                    @EduUruk.Models.Resources.GeneralRes.BtnEditText
+                </button>
+                <button type="button" id="BtnClose" class="btn btn-secondary waves-effect" data-bs-dismiss="modal" >
+                    <i class="icon-action-undo"></i>
+                    @EduUruk.Models.Resources.GeneralRes.BtnCancelText
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+  </form>
+</div>
+<!-- /.modal -->

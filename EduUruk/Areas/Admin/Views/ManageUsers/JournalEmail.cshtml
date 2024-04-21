@@ -1,0 +1,102 @@
+﻿@model UserForm
+
+<!-- modal -->
+<div id="AccessModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <form asp-action="JournalEmail"  asp-controller="ManageUsers"
+           class="modal-dialog modal-lg"
+          data-ajax="true" data-ajax-loading="#loader" data-ajax-loading-duration="100" data-ajax-method="POST" data-ajax-success="CloseModel"
+          >
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.UserId)
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">@SysModelRes.SendSMS</h4>
+                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal"><span class="svg-icon svg-icon-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black"></rect><rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black"></rect></svg></span></div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="row">
+                              <div class="col-sm-12 col-xs-12">
+                                    <div class="form-floating  mb-7">
+                                                <select class="form-control " id="SendType" name="SendType" >
+                                                    <option value="1">ايميل</option>
+                                                    <option value="2">رسالة نصية</option>
+                                                    <option value="3">ايميل و رسالة نصية</option>
+                                                </select>
+                                        <label class="control-label" for="SendType">نوع الارسال</label>
+                                    <i class="bar"></i>
+                                    </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-floating  mb-7">
+                                    @Html.EditorFor(model => model.ArabicUserName, new { htmlAttributes = new { @class = "form-control has-value",@disabled="disabled" } })
+                                    @Html.LabelFor(model => model.ArabicUserName, htmlAttributes: new { @class = "control-label" })
+                                    <i class="bar"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-floating  mb-7">
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control has-value",@disabled="disabled" } })
+                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                                    <i class="bar"></i>
+                                    
+                                </div>
+                            </div>
+                             <div class="col-sm-6 col-xs-12">
+                                <div class="form-floating  mb-7">
+                                    @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control has-value",@disabled="disabled" } })
+                                    @Html.LabelFor(model => model.Mobile, htmlAttributes: new { @class = "control-label" })
+                                    <i class="bar"></i>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="separator my-10"></div>
+
+                    <div class="row">
+                                   <div class="form-group col-md-6">
+                                          <label class="control-label mt-2 mb-2">عنوان الرسالة (للإيميل)</label>
+                                        <small class="text-danger">*</small>
+                                    <div class="form-group-custom">
+                                        <div class="position-relative has-icon-left">
+                                            <input type="text" class="form-control clearAfterSave" asp-for="MsgSubject" id="subject" name="subject" placeholder=" الرجاء كتابة عنوان الرسالة"></input>
+                                            <div class="form-control-position">
+                                            </div>
+                                        </div>
+                                          <span asp-validation-for="MsgSubject" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                 <div class="form-group col-md-12">
+                                        <label class="control-label mt-2 mb-2">الرسالة</label>
+                                        <small class="text-danger">*</small>
+                                    <div class="form-group-custom">
+                                        <div class="position-relative has-icon-left">
+                                            <textarea type="text" asp-for="MsgBody" class="form-control clearAfterSave" id="SMSText" name="SMSText" placeholder="الرجاء كتابة الرسالة"></textarea>
+                                            <div class="form-control-position">
+                                            </div>
+                                        </div>
+                                          <span asp-validation-for="MsgBody" class="text-danger"></span>
+                                         
+                                    </div>
+                                </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect waves-light">
+                    <i class="fa fa-save"></i>
+                    @GeneralRes.BtnSend
+                </button>
+                <button type="button" id="BtnClose" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">
+                    <i class="fa fa-undo"></i>
+                    @GeneralRes.BtnCancelText
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </form>
+</div>
+<!-- /.modal -->

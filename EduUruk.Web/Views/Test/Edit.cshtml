@@ -1,0 +1,59 @@
+﻿
+
+
+@model EduUruk.Models.Entities.Test
+
+<h1>Edit Test: @Model.Title</h1>
+
+
+<form asp-controller="Test" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="form-group">
+            <label>Is Active:</label>
+            <input type="checkbox" id="IsActive" name="IsActive" value="true" @(Model.IsActive == true ? "checked" : false) />
+            <label for="IsActive">Active</label>
+        </div>
+    }
+    <div class="form-group">
+        <label for="Title">Test Name:</label>
+        <input type="text" id="Title" name="Title" class="form-control" value="@Model.Title" >
+    </div>
+
+    <h2>Questions:</h2>
+    @for (var i = 0; i < Model.Questions.Count; i++)
+    {
+        <div class="question">
+            <input type="hidden" asp-for="@Model.Questions[i].Id" />
+            <div class="form-group">
+                <label for="QuestionText">Question @i:</label>
+                <input type="text" id="QuestionText" name="Questions[@i].QuestionText" class="form-control" value="@Model.Questions[i].QuestionText">
+            </div>
+
+            <ul class="answers">
+                @for (var j = 0; j < Model.Questions[i].Answers.Count; j++)
+                {
+                    <li>
+                        <input type="hidden" asp-for="@Model.Questions[i].Answers[j].AnswerId" />
+                        <input type="text" asp-for="@Model.Questions[i].Answers[j].AnswerText" class="form-control" />
+                        <label>
+                            <input type="checkbox" asp-for="@Model.Questions[i].Answers[j].IsCorrect" />
+                            Is Correct
+                        </label>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+@* Button to navigate to CreateQuestion action *@
+@if (User.IsInRole("Admin"))
+{
+    <div class="mt-3">
+        @Html.ActionLink("Add Question", "CreateQuestion", "Test", new { testId = Model.Id }, new { @class = "btn btn-success" })
+    </div>
+}

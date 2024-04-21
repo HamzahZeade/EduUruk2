@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Acutal_End_Date" xml:space="preserve">
+    <value>تاريخ التنفيذ الفعلي</value>
+  </data>
+  <data name="Acutal_Start_Date" xml:space="preserve">
+    <value>تاريخ البدء الفعلي</value>
+  </data>
+  <data name="AddingSuccessfully" xml:space="preserve">
+    <value>تم اضافة  مستخدم بنجاح</value>
+  </data>
+  <data name="AddingTitle" xml:space="preserve">
+    <value>اضافة </value>
+  </data>
+  <data name="ApplicationId" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="ApplicationIdRequired" xml:space="preserve">
+    <value>Application is required</value>
+  </data>
+  <data name="Approval_Date" xml:space="preserve">
+    <value>تاريخ اصدار التعميد</value>
+  </data>
+  <data name="Approve_No" xml:space="preserve">
+    <value>رقم التعميد</value>
+  </data>
+  <data name="ArabicDescription" xml:space="preserve">
+    <value>الوصف بالعربية</value>
+  </data>
+  <data name="ArabicDescriptionLength" xml:space="preserve">
+    <value>الوصف لا يتجاوز 165 حرف</value>
+  </data>
+  <data name="ArabicDescriptionRequired" xml:space="preserve">
+    <value>يجب إدخال الوصف</value>
+  </data>
+  <data name="ArabicGroupName" xml:space="preserve">
+    <value>Arabic Menu</value>
+  </data>
+  <data name="ArabicGroupNameLength" xml:space="preserve">
+    <value>Arabic Menu is limited to 35 symbols</value>
+  </data>
+  <data name="ArabicGroupNameRequired" xml:space="preserve">
+    <value>Arabic Menu is Required</value>
+  </data>
+  <data name="ArabicPageName" xml:space="preserve">
+    <value>Arabic page name</value>
+  </data>
+  <data name="ArabicPageNameLength" xml:space="preserve">
+    <value>Arabic page is limited to 35 symbols</value>
+  </data>
+  <data name="ArabicPageNameRequired" xml:space="preserve">
+    <value>Arabic page is required</value>
+  </data>
+  <data name="ArabicUserName" xml:space="preserve">
+    <value>اسم مستخدم</value>
+  </data>
+  <data name="ArabicUserNameLength" xml:space="preserve">
+    <value>اسم المستخدم لا يتجاوز 65 حرف</value>
+  </data>
+  <data name="ArabicUserNameRequired" xml:space="preserve">
+    <value>يجب إدخال اسم مستخدم</value>
+  </data>
+  <data name="blue" xml:space="preserve">
+    <value> أزرق | لون المظهر</value>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>اضافة جديد</value>
+  </data>
+  <data name="BtnChangePssword" xml:space="preserve">
+    <value>حفظ التعديلات</value>
+  </data>
+  <data name="BtnClose" xml:space="preserve">
+    <value>غلق</value>
+  </data>
+  <data name="CanActive" xml:space="preserve">
+    <value>التفعيل</value>
+  </data>
+  <data name="CanCreate" xml:space="preserve">
+    <value>الاضافة</value>
+  </data>
+  <data name="CanDelete" xml:space="preserve">
+    <value>الحذف</value>
+  </data>
+  <data name="CanEdit" xml:space="preserve">
+    <value>التعديل</value>
+  </data>
+  <data name="CanPrint" xml:space="preserve">
+    <value>الطباعة</value>
+  </data>
+  <data name="CanSelect" xml:space="preserve">
+    <value>الاستعراض</value>
+  </data>
+  <data name="Categories_PageTitle_Index" xml:space="preserve">
+    <value>التصنيفات</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>التصنيف</value>
+  </data>
+  <data name="Category_Name" xml:space="preserve">
+    <value>التصنيف</value>
+  </data>
+  <data name="ChangePasswordForm" xml:space="preserve">
+    <value>نموذج تغيير كلمة المرور</value>
+  </data>
+  <data name="ChangePasswordSuccessfully" xml:space="preserve">
+    <value>تم تعديل كلمة المرور بنجاح</value>
+  </data>
+  <data name="ChangePasswordTitle" xml:space="preserve">
+    <value>تعديل كلمة المرور</value>
+  </data>
+  <data name="CharacterName" xml:space="preserve">
+    <value>الصفة</value>
+  </data>
+  <data name="Characters_PageTitle_Index" xml:space="preserve">
+    <value>الصفات</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>اللون</value>
+  </data>
+  <data name="Complate_Precent" xml:space="preserve">
+    <value>نسبة الإنجاز</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>تأكيد كلمة المرور الجديدة</value>
+  </data>
+  <data name="ConfirmPasswordCompare" xml:space="preserve">
+    <value>كلمة المرور غير مطابقة</value>
+  </data>
+  <data name="ConfirmPasswordExceed" xml:space="preserve">
+    <value>تاكيد كلمة السر تعدت الحد المسموح</value>
+  </data>
+  <data name="ConfirmPasswordLength" xml:space="preserve">
+    <value>كلمة المرور لا يتجاوز 16 حرف</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>يجب إدخال تأكيد  كلمة المرور الجديدة</value>
+  </data>
+  <data name="ContractExpirationDate" xml:space="preserve">
+    <value>تاريخ انتهاء التعاقد</value>
+  </data>
+  <data name="ContractExpirationDateRequired" xml:space="preserve">
+    <value>يجب إدخال التاريخ</value>
+  </data>
+  <data name="Contractor" xml:space="preserve">
+    <value>المقاول</value>
+  </data>
+  <data name="Contractors_PageTitle_Index" xml:space="preserve">
+    <value>المقاولين</value>
+  </data>
+  <data name="Contractor_Name" xml:space="preserve">
+    <value>اسم المقاول</value>
+  </data>
+  <data name="Createdby" xml:space="preserve">
+    <value>اسم المستخدم بالعربية</value>
+  </data>
+  <data name="CreatedTime" xml:space="preserve">
+    <value>انشأ المستخدم في وقت</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>كلمة المرور الحالية</value>
+  </data>
+  <data name="CurrentPasswordExceed" xml:space="preserve">
+    <value>كلمة المرور لا يتجاوز 16 حرف</value>
+  </data>
+  <data name="CurrentPasswordRequired" xml:space="preserve">
+    <value>يجب إدخال كلمة المرور الحالية</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="DefaultLang" xml:space="preserve">
+    <value>اللغة الافتراضية</value>
+  </data>
+  <data name="DefaultLangLength" xml:space="preserve">
+    <value>اللغة يجب ان لا تتعدى 35</value>
+  </data>
+  <data name="DefaultLangRequired" xml:space="preserve">
+    <value>لابد من اختيار اللغة</value>
+  </data>
+  <data name="DefaultMenu" xml:space="preserve">
+    <value>اتجاه القائمة الرئيسية</value>
+  </data>
+  <data name="DefaultMenuRequired" xml:space="preserve">
+    <value>يجب اختيار اتجاه القائمة الرئيسية</value>
+  </data>
+  <data name="DefaultTheme" xml:space="preserve">
+    <value>لون المظهر</value>
+  </data>
+  <data name="DefaultThemeLength" xml:space="preserve">
+    <value>لون المظهر يجب ان لا يتعدى 35</value>
+  </data>
+  <data name="DefaultThemeRequired" xml:space="preserve">
+    <value>لابد من اختيار لون المظهر</value>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>هل أنت متأكد من حذف المستخدم:</value>
+  </data>
+  <data name="DeleteTitle" xml:space="preserve">
+    <value>حذف مستخدم</value>
+  </data>
+  <data name="DeletingSuccessfully" xml:space="preserve">
+    <value>تم حذف مستخدم بنجاح</value>
+  </data>
+  <data name="DepartmentID" xml:space="preserve">
+    <value>الادارة</value>
+  </data>
+  <data name="Desc" xml:space="preserve">
+    <value>نبذة</value>
+  </data>
+  <data name="Done_Note" xml:space="preserve">
+    <value>ما تم انجازه</value>
+  </data>
+  <data name="DT" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="EditingSuccessfully" xml:space="preserve">
+    <value>تم تعديل مستخدم بنجاح</value>
+  </data>
+  <data name="EditProfileSuccessfully" xml:space="preserve">
+    <value>تم تعديل الملف الشخصي بنجاح</value>
+  </data>
+  <data name="EditProfileTitle" xml:space="preserve">
+    <value>تعديل الملف الشخصي</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>تعديل مستخدم</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الكتروني </value>
+  </data>
+  <data name="EmailInvalid" xml:space="preserve">
+    <value>البريد الاكتروني غير صحيح</value>
+  </data>
+  <data name="EmailLength" xml:space="preserve">
+    <value>البريد الاكتروني لا يتجاوز 35 حرف</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>يجب إدخال البريد الالكتروني</value>
+  </data>
+  <data name="End_Date" xml:space="preserve">
+    <value>تاريخ انتهاء التنفيذ</value>
+  </data>
+  <data name="EnglishDescription" xml:space="preserve">
+    <value>الوصف بالانجليزية</value>
+  </data>
+  <data name="EnglishDescriptionLength" xml:space="preserve">
+    <value>الوصف لا يتجاوز 165 حرف</value>
+  </data>
+  <data name="EnglishDescriptionRequired" xml:space="preserve">
+    <value>يجب إدخال الوصف</value>
+  </data>
+  <data name="EnglishGroupName" xml:space="preserve">
+    <value>English Menu Name</value>
+  </data>
+  <data name="EnglishGroupNameLength" xml:space="preserve">
+    <value>English Menu Name is limited to 35 symbols</value>
+  </data>
+  <data name="EnglishGroupNameRequired" xml:space="preserve">
+    <value>English Menu Name is required</value>
+  </data>
+  <data name="EnglishPageName" xml:space="preserve">
+    <value>English page name</value>
+  </data>
+  <data name="EnglishPageNameLength" xml:space="preserve">
+    <value>English page name is limited to 35 symbols</value>
+  </data>
+  <data name="EnglishPageNameRequired" xml:space="preserve">
+    <value>English page name is required</value>
+  </data>
+  <data name="EnglishUserName" xml:space="preserve">
+    <value>اسم المستخدم بالانجليزية</value>
+  </data>
+  <data name="EnglishUserNameLength" xml:space="preserve">
+    <value>اسم المستخدم لا يتجاوز 65 حرف</value>
+  </data>
+  <data name="EnglishUserNameRequired" xml:space="preserve">
+    <value>يجب ادخال اسم المستخدم</value>
+  </data>
+  <data name="Envelope_Date" xml:space="preserve">
+    <value>تاريخ فتح المظاريف</value>
+  </data>
+  <data name="ForgetAccountPassword" xml:space="preserve">
+    <value>نسيت بيانات الحساب</value>
+  </data>
+  <data name="ForgetPageTitle" xml:space="preserve">
+    <value>نسيت كلمة المرور</value>
+  </data>
+  <data name="ForgetPasswordTitle" xml:space="preserve">
+    <value>إعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="gray" xml:space="preserve">
+    <value>رمادي | لون المظهر</value>
+  </data>
+  <data name="green" xml:space="preserve">
+    <value>أخضر | لون المظهر</value>
+  </data>
+  <data name="GroupIco" xml:space="preserve">
+    <value>Menu Icon</value>
+  </data>
+  <data name="GroupIcoLength" xml:space="preserve">
+    <value>Icon is limited to 15 symbols</value>
+  </data>
+  <data name="GroupIcoRequired" xml:space="preserve">
+    <value>Icon is required</value>
+  </data>
+  <data name="GroupID" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Menu Name</value>
+  </data>
+  <data name="GroupNameTextField" xml:space="preserve">
+    <value>ArabicGroupName</value>
+  </data>
+  <data name="GroupOrder" xml:space="preserve">
+    <value>Menu Order</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>الضيف</value>
+  </data>
+  <data name="HelloText" xml:space="preserve">
+    <value>مرحبا </value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="IdentityExpirationDate" xml:space="preserve">
+    <value>تاريخ انتهاء الهوية</value>
+  </data>
+  <data name="IdentityExpirationDateRequired" xml:space="preserve">
+    <value>يجب إدخال التاريخ</value>
+  </data>
+  <data name="InProgress_Note" xml:space="preserve">
+    <value>جار العمل</value>
+  </data>
+  <data name="InvalidCurrentPasword" xml:space="preserve">
+    <value>كلمة المرور الحالية غير صحيحة</value>
+  </data>
+  <data name="InvalideMailData" xml:space="preserve">
+    <value>البريد الالكتروني لا يخص مستخدم</value>
+  </data>
+  <data name="InvalidLoginData" xml:space="preserve">
+    <value>بيانات الدخول غير صحيحة</value>
+  </data>
+  <data name="InvalidResetToken" xml:space="preserve">
+    <value>الرابط غير صحيح او صلاحية الرابط منتهيه</value>
+  </data>
+  <data name="Inviter" xml:space="preserve">
+    <value>الداعي</value>
+  </data>
+  <data name="LastLogin" xml:space="preserve">
+    <value>اخر تسجيل دخول</value>
+  </data>
+  <data name="LastLoginStatus" xml:space="preserve">
+    <value>حالة اخر تسجيل دخول</value>
+  </data>
+  <data name="Locations_PageTitle_Index" xml:space="preserve">
+    <value>المواقع</value>
+  </data>
+  <data name="Location_Name" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="LockedOutAccountMessage" xml:space="preserve">
+    <value>الحساب معطل</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>تسجيل دخول</value>
+  </data>
+  <data name="Logs_PageTitle_Index" xml:space="preserve">
+    <value>سجل الاحداث</value>
+  </data>
+  <data name="ManagerID" xml:space="preserve">
+    <value>المدير</value>
+  </data>
+  <data name="ManagerPlaceholder" xml:space="preserve">
+    <value>حدد المدير ...</value>
+  </data>
+  <data name="MeetingAttend" xml:space="preserve">
+    <value>الحضور</value>
+  </data>
+  <data name="MeetingAttendss_PageTitle_Index" xml:space="preserve">
+    <value>الحضور</value>
+  </data>
+  <data name="MeetingAttends_Status" xml:space="preserve">
+    <value>حالة الحضور</value>
+  </data>
+  <data name="Meetings_PageTitle_Index" xml:space="preserve">
+    <value>المواعيد</value>
+  </data>
+  <data name="Meeting_Duration" xml:space="preserve">
+    <value>المدة</value>
+  </data>
+  <data name="Meeting_Time" xml:space="preserve">
+    <value>الوقت</value>
+  </data>
+  <data name="Meeting_Title" xml:space="preserve">
+    <value>الموعد</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>رقم الجوال</value>
+  </data>
+  <data name="MobileInvalid" xml:space="preserve">
+    <value>رقم الجوال غير صحيح</value>
+  </data>
+  <data name="MobileLength" xml:space="preserve">
+    <value>رقم  الجوال لا يتجاوز 20 حرف</value>
+  </data>
+  <data name="MobileRequired" xml:space="preserve">
+    <value>يجب ادخال رقم الجوال</value>
+  </data>
+  <data name="NewData" xml:space="preserve">
+    <value>NewData</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>كلمة المرور الجديدة</value>
+  </data>
+  <data name="NewPasswordExceed" xml:space="preserve">
+    <value>كلمة السر الجديدة تعدت الحد المسموح</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>يجب إدخال كلمة المرور الجديدة</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="OldData" xml:space="preserve">
+    <value>OldData</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>كلمة المرور القديمة</value>
+  </data>
+  <data name="OprType" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>الترتيب</value>
+  </data>
+  <data name="PageGroupIndex" xml:space="preserve">
+    <value>PageGroupIndex</value>
+  </data>
+  <data name="PageGroups_PageTitle_Index" xml:space="preserve">
+    <value>مجموعة الصفحات</value>
+  </data>
+  <data name="PageID" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="PageIndex" xml:space="preserve">
+    <value>ترتيب الصفحة</value>
+  </data>
+  <data name="PageIndexRequired" xml:space="preserve">
+    <value>ادخل ترتيب الصفحة</value>
+  </data>
+  <data name="PageName" xml:space="preserve">
+    <value>Page name</value>
+  </data>
+  <data name="PageNameTextField" xml:space="preserve">
+    <value>EnglishPageName</value>
+  </data>
+  <data name="Pages_PageTitle_Index" xml:space="preserve">
+    <value>الصفحات</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>مستخدمي النظام</value>
+  </data>
+  <data name="PageTitle_Create" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="PageTitle_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="PageTitle_Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="PageURL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="PageURLLength" xml:space="preserve">
+    <value>URL is limited to 15 symbols</value>
+  </data>
+  <data name="PageURLRequired" xml:space="preserve">
+    <value>URL is required</value>
+  </data>
+  <data name="ParentID" xml:space="preserve">
+    <value>المدير التابع له</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="PasswordExpression" xml:space="preserve">
+    <value>كلمة المرور لا تفي المتطلبات</value>
+  </data>
+  <data name="PasswordLength" xml:space="preserve">
+    <value>كلمة المرور من 8 الى 16 خانة</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>يجب ادخال كلمة المرور</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>صورة المستخدم</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>المبلغ</value>
+  </data>
+  <data name="Priorities_PageTitle_Index" xml:space="preserve">
+    <value>مستوى الأهميات</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>مستوى الأهمية</value>
+  </data>
+  <data name="Priority_Name" xml:space="preserve">
+    <value>مستوى الأهمية</value>
+  </data>
+  <data name="ProjectHeads" xml:space="preserve">
+    <value>المهام</value>
+  </data>
+  <data name="ProjectHeads_PageTitle_Index" xml:space="preserve">
+    <value>المهام الرئيسية</value>
+  </data>
+  <data name="ProjectHead_Name" xml:space="preserve">
+    <value>المهمة</value>
+  </data>
+  <data name="Projectss_PageTitle_Index" xml:space="preserve">
+    <value>المهام</value>
+  </data>
+  <data name="ProjectSubTasks" xml:space="preserve">
+    <value>مسار الانجاز</value>
+  </data>
+  <data name="ProjectSubTasks_PageTitle_Index" xml:space="preserve">
+    <value>مسار إنجاز المهمة</value>
+  </data>
+  <data name="ProjectType" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="ProjectType_Name" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="Project_Name" xml:space="preserve">
+    <value>المهمة</value>
+  </data>
+  <data name="red" xml:space="preserve">
+    <value>أحمر | لون المظهر</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>تاريخ التسجيل</value>
+  </data>
+  <data name="RegistrationDateRequired" xml:space="preserve">
+    <value>يجب ادخال تاريخ التسجيل</value>
+  </data>
+  <data name="RelatedDataException" xml:space="preserve">
+    <value>لا يمكن حذف  المستخدم لوجود بيانات مرتبطة</value>
+  </data>
+  <data name="RelatedDataException1" xml:space="preserve">
+    <value>لايمكن الحذف لوجود بيانات مرتبطة</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>تذكرني</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>مطلوب الادخال</value>
+  </data>
+  <data name="Required_Length" xml:space="preserve">
+    <value>يجب أن لا يتجاوز الغدد المسموح فيه</value>
+  </data>
+  <data name="ResetPageTitle" xml:space="preserve">
+    <value>اعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="ResetPasswordMailMessage" xml:space="preserve">
+    <value>لإعادة تعيين كلمة المرور قم بالضغط على الرابط أدناه</value>
+  </data>
+  <data name="ResetPasswordMailMessageFooter" xml:space="preserve">
+    <value>الرابط صالح لمدة 30 دقيقة فقط</value>
+  </data>
+  <data name="ResetPasswordMailSubject" xml:space="preserve">
+    <value>Secuirty System : إعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="RoleID" xml:space="preserve">
+    <value>المجموعة</value>
+  </data>
+  <data name="RoleIDRequired" xml:space="preserve">
+    <value>يجب تحديد المجموعة</value>
+  </data>
+  <data name="RoleIDSelectTitle" xml:space="preserve">
+    <value>حدد المجموعة ...</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>الصلاحيات</value>
+  </data>
+  <data name="RolesRequired" xml:space="preserve">
+    <value>حدد صلاحية واحده على الأقل</value>
+  </data>
+  <data name="SendResetPasswordFailed" xml:space="preserve">
+    <value>تعذر إرسال رابط إعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="SendResetPasswordSuccessfully" xml:space="preserve">
+    <value>تم إرسال رابط إعادة تعيين كلمة المرور </value>
+  </data>
+  <data name="SName" xml:space="preserve">
+    <value>المهندس المشرف</value>
+  </data>
+  <data name="Start_Date" xml:space="preserve">
+    <value>تاريخ بدء العمل</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Statuss_PageTitle_Index" xml:space="preserve">
+    <value>الحالات</value>
+  </data>
+  <data name="Status_Name" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="TableName" xml:space="preserve">
+    <value>TableName</value>
+  </data>
+  <data name="TitleName" xml:space="preserve">
+    <value>اللقب</value>
+  </data>
+  <data name="Titles_PageTitle_Index" xml:space="preserve">
+    <value>الالقاب</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UpdatdTime" xml:space="preserve">
+    <value>عدل المستخدم في وقت</value>
+  </data>
+  <data name="UpdatedBy" xml:space="preserve">
+    <value>عدل المستخدم بواسطة</value>
+  </data>
+  <data name="UploadText" xml:space="preserve">
+    <value>أنقر لإضافة صورة</value>
+  </data>
+  <data name="UserFullName" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>رقم المستخدم</value>
+  </data>
+  <data name="UserIDLength" xml:space="preserve">
+    <value>رقم المستخدم لا يتعدى 15 حرف</value>
+  </data>
+  <data name="UserIDPlaceholder" xml:space="preserve">
+    <value>حدد المستخدم ...</value>
+  </data>
+  <data name="UserIDRequired" xml:space="preserve">
+    <value>حدد المستخدم</value>
+  </data>
+  <data name="UserIds" xml:space="preserve">
+    <value>المستخدمين</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="UserNameLength" xml:space="preserve">
+    <value>اسم المستخدم لا يتجاوز 25 خانة</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>يجب إدخال اسم المستخدم</value>
+  </data>
+  <data name="UserNameTextField" xml:space="preserve">
+    <value>ArabicUserName</value>
+  </data>
+  <data name="UserRolesTitle" xml:space="preserve">
+    <value>تعيين صلاحيات المستخدم</value>
+  </data>
+  <data name="UserRoles_PageTitle_Index" xml:space="preserve">
+    <value>مجموعة صلاحية</value>
+  </data>
+  <data name="Users_PageTitle_Index" xml:space="preserve">
+    <value>المستخدمين</value>
+  </data>
+</root>

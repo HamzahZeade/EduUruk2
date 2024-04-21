@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-arrow">
+      <rect width="21" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="arrow" clip-path="url(#clip-arrow)">
+    <g id="arrow-90deg-right" transform="translate(1.498 1.133)">
+      <path id="Path_5745" data-name="Path 5745" d="M28.083,15.992a.8.8,0,0,0,0-1.129l-4.221-4.22,4.221-4.22A.8.8,0,1,0,26.954,5.3L22.17,10.079a.8.8,0,0,0,0,1.129l4.784,4.784a.8.8,0,0,0,1.129,0Z" transform="translate(-21.935 2.113)" fill="#00ba88" fill-rule="evenodd"/>
+      <path id="Path_5746" data-name="Path 5746" d="M8.438,24.57a.8.8,0,0,0,.8.8H19.6a3.986,3.986,0,0,0,3.986-3.986V12.61a.8.8,0,0,0-1.595,0v8.77A2.392,2.392,0,0,1,19.6,23.772H9.235A.8.8,0,0,0,8.438,24.57Z" transform="translate(-7.64 -11.813)" fill="#00ba88" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

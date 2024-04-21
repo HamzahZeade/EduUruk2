@@ -1,0 +1,54 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@font-face {
+    font-family: "rubik";
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/Rubik/Rubik-Regular.ttf') format('truetype')
+}
+
+html {
+    direction: rtl;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "rubik";
+    background: url('../img/pattern-overlay.png') repeat-x left bottom, linear-gradient(0deg, rgba(42,33,90,1) 0%, rgba(83,70,150,1) 100%);
+    background-attachment: fixed;
+}
+
+.card {
+    border: 0px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+    background-color: #f0f0f0;
+}
+
+.form-control {
+    color: #404040;
+    background-color: #e9e9e9;
+    border: 1px solid #2A377D;
+    font-size: 13px;
+    padding: 10px 15px;
+    text-align: right;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+}
+
+.sweet-alert {
+    font-family: "rubik" !important;
+}

@@ -1,0 +1,37 @@
+﻿@model EduUruk.Models.Auth_Tables.PageGroup
+
+<!-- modal -->
+<div id="AccessModal" class="modal fade"  data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form asp-action="Delete"  
+           class="modal-dialog modal-lg"
+          data-ajax="true" data-ajax-loading="#loader" data-ajax-loading-duration="100" data-ajax-method="POST" data-ajax-success="CloseModel"
+          >
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.GroupID)
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">@EduUruk.Models.Resources.SysModelRes.DeleteTitle</h4>
+                <button type="button" class="close" data-bs-dismiss="modal"  aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="alert alert-warning" style="margin-bottom:0px;">@EduUruk.Models.Resources.SysModelRes.DeleteMessage @Model.GroupName .</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default waves-effect waves-light">
+                    <i class="fa fa-check"></i>
+                    @EduUruk.Models.Resources.GeneralRes.BtnYes
+                </button>
+                <button type="button" id="BtnClose" class="btn btn-secondary waves-effect" data-bs-dismiss="modal" >
+                    <i class="fa fa-times"></i>
+                    @EduUruk.Models.Resources.GeneralRes.BtnCancelText
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </form> <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

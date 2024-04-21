@@ -1,0 +1,89 @@
+﻿@using EduUruk.Models.Entities
+@using EduUruk.Models.Entities;
+@using EduUruk.Models.Auth_Tables;
+@using Microsoft.AspNetCore.Identity
+@model Dictionary<CategoryLibrary, List<Library>>
+@inject SignInManager<User> SignInManager
+
+<div class="content">
+    <div class="container">
+        <a asp-controller="Document" asp-action="Upload">Add New Document</a>
+        <div class="row d-flex flex-row flex-wrap align-items-stretch">
+
+            @foreach (var categoryLibraries in Model)
+            {
+                <h2>@categoryLibraries.Key.Name</h2>
+
+
+                @foreach (var item in categoryLibraries.Value)
+                {
+                    <div class="col-sm-12 col-md-4 col-lg-3 py-3">
+                        <div class="border card-shadow text-center">
+                            <div class="p-3">
+                                <div class="col">
+                                    <div data-src-id="@item.FilePath" data-thumb-id="@item.Id" data-description="@item.Title" class="img-thumbnail-ML text-center rounded-4" style="background-color: #f7f5f5; background-image: url('@Url.Action("Download", "DocumentLibrary", new { id = item.Id })'); background-size: 100% 100%;">
+                                        <img src="@Url.Action("GetImage", "DocumentLibrary", new { id = item.Id })" alt="@item.Title" class="mw-100 py-20" style="margin: 71px 0px;height: 140px;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex px-4 justify-content-start">
+                                <span class="fs-6 fw-bold px-2">
+                                    @Html.Raw(@item.Title)
+                                </span>
+                            </div>
+
+                            <div class="d-flex px-4 justify-content-start">
+                                <span class="fs-6 fw-bold px-2">
+                                    @Html.Raw(@item.Description)
+                                </span>
+                            </div>
+
+                            <div class="d-flex px-4 justify-content-start">
+                                <span class="fs-6 fw-bold px-2">
+                                    @Html.Raw(@item.Type)
+                                </span>
+                            </div>
+                            <div class="d-flex px-4 justify-content-start">
+                                <span class="fs-6 fw-bold px-2">
+                                    @Html.Raw(@item.StatusDocument)
+                                </span>
+                            </div>
+                            @if (@item.PriceType.ToString() == "Free")
+                            {
+                                <div class="d-flex px-4 justify-content-start">
+                                    <span class="fs-6 fw-bold px-2 text-success">Free</span>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="d-flex px-4 justify-content-start">
+                                    <span class="fs-6 fw-bold px-2 text-primary">@Html.Raw(@item.Price)</span>
+                                </div>
+                            }
+                           @* <div class="d-flex px-4 justify-content-start">
+                                <span class="fs-6 fw-bold px-2">
+                                    @Html.Raw(@item.PriceType)
+                                </span>
+                            </div>
+                            <div class="d-flex px-4 justify-content-start">
+                                <span class="fs-6 fw-bold px-2">
+                                    @Html.Raw(@item.Price)
+                                </span>
+                            </div>*@
+                            @if (User.IsInRole("Studant") || User.IsInRole("Admin") )
+                            {
+                                <div class="d-flex mb-2 me-4 justify-content-end">
+                                    <a href="@Url.Action("Download", "DocumentLibrary", new { id = item.Id })" class="btn btn-sm btn-primary">Download</a>
+                                </div>
+                            }
+                          
+                        </div>
+                    </div>
+                }
+            }
+           
+        </div>
+    </div>
+</div>
+
+

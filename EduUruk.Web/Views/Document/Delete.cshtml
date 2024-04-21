@@ -1,0 +1,13 @@
+﻿@using EduUruk.Models.Entities;
+@model Library
+
+<h1>Delete Documnat</h1>
+
+<p>Are you sure you want to delete this Documant?</p>
+
+<form asp-controller="Document" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-controller="Video" asp-action="Index">Cancel</a>
+</form>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <clipPath id="clip-trach">
+      <rect width="37" height="37"/>
+    </clipPath>
+  </defs>
+  <g id="trach" clip-path="url(#clip-trach)">
+    <g id="Group_1449" data-name="Group 1449" transform="translate(-1237.883 -558.883)">
+      <circle id="Ellipse_31" data-name="Ellipse 31" cx="17.5" cy="17.5" r="17.5" transform="translate(1238.883 559.883)" fill="#dce5f4"/>
+      <g id="trash-solid" transform="translate(1245.882 567.883)">
+        <path id="Path_5721" data-name="Path 5721" d="M6,9v9.712a1.293,1.293,0,0,0,1.263,1.324H15.31a1.293,1.293,0,0,0,1.285-1.324V9Zm3.973,8.829H9.09V11.207h.883Zm3.532,0h-.883V11.207H13.5Z" transform="translate(-1.117 -3.91)" fill="#99a9c4"/>
+        <path id="Path_5722" data-name="Path 5722" d="M15.8,3.324H12.388V2.883A.883.883,0,0,0,11.5,2H8.768a.883.883,0,0,0-.795.883v.441H4.441a.441.441,0,1,0,0,.883H15.8a.441.441,0,1,0,0-.883Z" fill="#99a9c4"/>
+      </g>
+    </g>
+  </g>
+</svg>

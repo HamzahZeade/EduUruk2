@@ -1,0 +1,62 @@
+﻿@model EduUruk.Models.ViewModels.QuestionViewModel
+
+<h1>Create Questions for @Model.TestName</h1>
+
+<form asp-action="CreateQuestion" asp-controller="Test" method="post">
+    <input type="hidden" asp-for="TestId" />
+    <input type="hidden" asp-for="TestName" />
+    <div id="questions-container">
+        <!-- Dynamic question input fields will be added here -->
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="addQuestion()">Add Question</button>
+    <button type="submit" class="btn btn-success">Create Questions</button>
+</form>
+
+@section Scripts {
+    <script>
+        function addQuestion() {
+            var container = document.getElementById('questions-container');
+            var index = container.children.length;
+
+            var questionDiv = document.createElement('div');
+            questionDiv.classList.add('form-group');
+
+            var label = document.createElement('label');
+            label.textContent = 'Question ' + (index + 1) + ':';
+            questionDiv.appendChild(label);
+
+            var textarea = document.createElement('textarea');
+            textarea.name = 'Questions[' + index + '].QuestionText';
+            textarea.classList.add('form-control');
+            questionDiv.appendChild(textarea);
+
+            // Add answer input fields
+            for (var i = 0; i < 4; i++) {
+                var answerLabel = document.createElement('label');
+                answerLabel.textContent = 'Answer ' + (i + 1) + ':';
+                questionDiv.appendChild(answerLabel);
+
+                var answerInput = document.createElement('input');
+                answerInput.type = 'text';
+                answerInput.name = 'Questions[' + index + '].Answers[' + i + '].AnswerText';
+                answerInput.classList.add('form-control');
+                questionDiv.appendChild(answerInput);
+
+                // Correct answer radio button
+                var correctAnswerLabel = document.createElement('label');
+                correctAnswerLabel.textContent = 'Correct Answer:';
+                questionDiv.appendChild(correctAnswerLabel);
+
+                var correctAnswerInput = document.createElement('input');
+                correctAnswerInput.type = 'radio';
+                correctAnswerInput.name = 'Questions[' + index + '].CorrectAnswerIndex';
+                correctAnswerInput.value = i;
+                questionDiv.appendChild(correctAnswerInput);
+
+            }
+
+            container.appendChild(questionDiv);
+        }
+    </script>
+}
