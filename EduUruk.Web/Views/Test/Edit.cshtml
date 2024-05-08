@@ -20,6 +20,10 @@
         <label for="Title">Test Name:</label>
         <input type="text" id="Title" name="Title" class="form-control" value="@Model.Title" >
     </div>
+    <div class="form-group">
+        <label for="Title">Test Mark:</label>
+        <input type="text" id="Mark" name="Mark" class="form-control" value="@Model.Mark">
+    </div>
 
     <h2>Questions:</h2>
     @for (var i = 0; i < Model.Questions.Count; i++)
@@ -29,6 +33,10 @@
             <div class="form-group">
                 <label for="QuestionText">Question @i:</label>
                 <input type="text" id="QuestionText" name="Questions[@i].QuestionText" class="form-control" value="@Model.Questions[i].QuestionText">
+            </div>
+            <div class="form-group">
+                <label for="QuestionText">Question QuestionMark @i:</label>
+                <input type="text" id="QuestionMark" name="Questions[@i].QuestionMark" class="form-control" value="@Model.Questions[i].QuestionMark">
             </div>
 
             <ul class="answers">

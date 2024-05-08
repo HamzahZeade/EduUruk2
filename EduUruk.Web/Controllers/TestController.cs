@@ -46,6 +46,7 @@ namespace EduUruk.Web.Controllers
                     ChangedBy = userId,
                     ChangedOn = DateTime.Now,
                     CreatedOn = DateTime.Now,
+                    Mark = test.Mark,
                     Title = test.Title,
                     IsActive = test.IsActive == null ? false : test.IsActive
                 };
@@ -74,6 +75,7 @@ namespace EduUruk.Web.Controllers
             {
                 TestId = testId,
                 TestName = test.Title // Assuming Test has a Title property
+
             };
 
             return View(model);
@@ -109,6 +111,7 @@ namespace EduUruk.Web.Controllers
                 test.ChangedBy = userId;
                 test.ChangedOn = DateTime.Now;
                 test.CreatedOn = DateTime.Now;
+                test.Mark = test.Mark;
                 test.IsActive = test.IsActive == null ? false : test.IsActive;
 
                 _context.Tests.Update(test);
@@ -124,6 +127,7 @@ namespace EduUruk.Web.Controllers
                         existingQuestion.ChangedOn = DateTime.Now;
                         existingQuestion.CreatedOn = DateTime.Now;
                         existingQuestion.QuestionText = question.QuestionText;
+                        existingQuestion.QuestionMark = question.QuestionMark;
                         // Update answer entity in the context
                         _context.Questions.Update(existingQuestion);
                     }

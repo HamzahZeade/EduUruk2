@@ -12,5 +12,6 @@ namespace EduUruk.Models.Entities
         public List<Answer> Answers { get; set; }
         public string QuestionText { get; set; }
         public int CorrectAnswerIndex { get; set; }
+        public int QuestionMark { get; set; }
     }
 }

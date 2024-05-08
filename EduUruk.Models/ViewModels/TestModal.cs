@@ -3,6 +3,7 @@
     public class TestModal
     {
         public string Title { get; set; }
+        public int Mark { get; set; }
 
         public bool? IsActive { get; set; } = false;
     }

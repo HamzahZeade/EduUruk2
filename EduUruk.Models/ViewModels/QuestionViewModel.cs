@@ -4,6 +4,7 @@
     {
         public Guid TestId { get; set; }
         public string TestName { get; set; }
+        public int QuestionMark { get; set; }
         public List<QuestionInputModel> Questions { get; set; }
 
         // You can add more properties as needed for question creation

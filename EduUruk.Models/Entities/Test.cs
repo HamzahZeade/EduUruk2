@@ -11,6 +11,8 @@ namespace EduUruk.Models.Entities
         //public string UserID { get; set; }
         //[ForeignKey("UserID")]
         //public virtual User User { get; set; }
+
+        public int Mark { get; set; }
         public List<Question> Questions { get; set; }
     }
 }

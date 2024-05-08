@@ -53,6 +53,7 @@ namespace EduUruk.Web.Controllers
         {
             return View(new LoginForm { ReturnUrl = returnUrl });
         }
+
         [HttpPost]
         public async Task<IActionResult> Login(LoginForm model)
         {
