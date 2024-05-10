@@ -37,6 +37,7 @@ builder.Services.Configure<FormOptions>(options =>
 //         .AddDefaultTokenProviders();
 // Add services to the container.
 //Video Processing Setup
+
 GlobalFFOptions.Configure(new FFOptions { BinaryFolder = "./ffmpeg/bin", TemporaryFilesFolder = "/tmp" });
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
