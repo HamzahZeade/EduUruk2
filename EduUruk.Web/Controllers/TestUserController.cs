@@ -15,25 +15,32 @@ namespace EduUruk.Web.Controllers
             _context = context;
         }
         // GET: TestUser/Index
-        //public IActionResult Index()
-        //{
-        //    var tests = _context.Tests.ToList();
-        //    return View(tests);
-        //}
         public IActionResult Index()
         {
-            var test = _context.Tests
-                .Include(t => t.Questions) // Include questions related to the test
-                .ThenInclude(q => q.Answers) // Include answers related to each question
-                .ToList();
-
-            if (test == null)
-            {
-                return NotFound();
-            }
-
-            return View(test);
+            var tests = _context.Tests.Where(x => x.IsActive == true).ToList();
+            return View(tests);
         }
+
+
+        public IActionResult QustionsTest(Guid Id)
+        {
+            var Questions = _context.Questions.Where(x => x.TestId == Id).Include(t => t.Answers).ToList();
+            return View(Questions);
+        }
+        //public IActionResult Index()
+        //{
+        //    var test = _context.Tests
+        //        .Include(t => t.Questions) // Include questions related to the test
+        //        .ThenInclude(q => q.Answers) // Include answers related to each question
+        //        .ToList();
+
+        //    if (test == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return View(test);
+        //}
 
         // GET: TestUser/AnswerTest/5
         //public IActionResult AnswerTest(Guid id)

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+    <title>Hello, world!</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <style>
+        .navbar {
+            background-color: transparent !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            margin-left: 20px;
+            font-size: 20px;
+            font-family: "Oswald", sans-serif;
+        }
+
+        /* تكبير الكلمة
+        .nav-item:hover .nav-link {
+            font-size: 25px;
+        } */
+
+        /* تغيير الظل */
+        .nav-item:hover .nav-link {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        aside {
+            color: #fff;
+            /* White text color */
+            padding-left: 50px;
+            max-width: 35%;
+            /* Adjust width as needed */
+        }
+
+        aside h1 {
+            font-size: 34px;
+            color: black;
+        }
+
+        aside h1 span {
+            color: orange;
+            /* Highlighted text color */
+        }
+
+        aside p {
+            font-size: 26px;
+            /* Paragraph font size */
+            margin-top: 10px;
+            /* Space between title and paragraph */
+            color: black;
+        }
+
+        #students {
+            margin-right: 50px;
+            /* Adjust margin as needed */
+            max-width: 60%;
+            width: 50%;
+        }
+
+        footer {
+
+            color: rgb(6, 6, 6);
+
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" width="150px" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Library.html">library <span class="sr-only">(current)</span> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="courses.html">videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="test.html">Tests</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"> about us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Signin.html"> Sign in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <section class="courses" style="padding-top: 5%;">
+
+        <h1 class="heading">our courses</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-2.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-1.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete HTML tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-3.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-2.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete CSS tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-4.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-3.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete JS tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-5.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-4.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete Boostrap tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-6.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-5.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete JQuery tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-7.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-6.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete SASS tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-8.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-7.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete PHP tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-9.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-8.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete MySQL tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+                    <img src="images/pic-1.jpg" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="images/thumb-9.png" alt="">
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete react tutorial</h3>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        &copy; 2024 EDuUrulk All Rights Reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

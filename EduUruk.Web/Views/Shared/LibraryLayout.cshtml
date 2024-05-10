@@ -1,0 +1,243 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link href="~/newtheem/css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #161418;
+            color: #eee;
+            user-select: none;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('newtheem/images/yaba.png');
+            /*background-image: url('newtheem\images\yaba.png');*/
+            background-size: cover;
+        }
+
+        .nav-item:hover .nav-link {
+            font-size: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar {
+            background-color: transparent !important;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            margin-left: 20px;
+            font-size: 20px;
+            font-family: "Oswald", sans-serif;
+        }
+
+        footer {
+            color: #eee;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .carousel-item {
+            text-align: center;
+        }
+
+        .carousel-inner {
+            margin-top: 50px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            color: #000000;
+        }
+
+            .carousel-control-prev:hover,
+            .carousel-control-next:hover {
+                color: #050505;
+            }
+
+        .fa_taital {
+            color: #000000;
+        }
+
+        .box_main {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .Book_text,
+        .price_text {
+            color: #fff;
+        }
+
+        .Book_img img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn_main {
+            margin-top: 20px;
+        }
+
+            .btn_main a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                background-color: #007bff;
+                border-radius: 5px;
+            }
+
+                .btn_main a:hover {
+                    background-color: #0056b3;
+                }
+
+
+
+        .buy_bt {
+            float: left;
+            width: 100%;
+            padding: 10px;
+        }
+
+            .buy_bt a {
+                width: 100%;
+                font-size: 16px;
+                color: #57e26e;
+                background-color: transparent;
+                text-align: right;
+                font-weight: bold;
+            }
+
+                .buy_bt a:hover {
+                    background-color: transparent;
+                    color: #262626;
+                }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/NewTheem/images/logo.png" width="150px" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                @*     <li class="nav-item active">
+                <a class="nav-link" href="Library.html">Library <span class="sr-only">(current)</span> </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="courses.html">Videos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="test.html">Tests</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Signin.html">Sign In</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="DocumentLibrary" asp-action="Index">Library <span class="sr-only">(current)</span></a>
+                </li>*@
+
+                @*  <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>*@
+
+                @if (User.IsInRole("Admin"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Video" asp-action="Index">Videos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Document" asp-action="Index">Document List</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Test" asp-action="Index">Tests</a>
+                    </li>
+
+                }
+                @*    @if (User.IsInRole("Studant") || User.IsInRole("Admin"))
+                {*@
+
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="DocumentLibrary" asp-action="Index">Library <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="VideosLibrary" asp-action="Index">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="TestUser" asp-action="Index"> Test</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                </li>
+                @*}*@
+
+
+
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                    </li>
+                }
+
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+  
+
+    <footer>
+        &copy; 2024 EDuUrulk All Rights Reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

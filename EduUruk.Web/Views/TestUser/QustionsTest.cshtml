@@ -1,0 +1,34 @@
+﻿@using EduUruk.Models.Entities;
+
+@{
+    Layout = "qustionsLayout";
+}
+
+@foreach (var item in Model as List<Question>)
+{
+    <div class="container">
+        <h2>Program statements that repeat a set of commands as long as a boolean condition is true.</h2>
+        <div class="question">@item.QuestionText</div>
+        <div class="options">
+        @foreach (var answer in item.Answers as List<Answer>)
+        {
+           
+                <div class="option">@answer.AnswerText</div>
+           
+        }
+        </div>
+    </div>
+}
+
+
+<div class="container">
+    <h2>Program statements that repeat a set of commands as long as a boolean condition is true.</h2>
+    <div class="question">Choose matching term</div>
+
+    <div class="options">
+        <div class="option">A. Paris</div>
+        <div class="option">B. London</div>
+        <div class="option correct">C. Rome</div>
+        <div class="option">D. Madrid</div>
+    </div>
+</div>

@@ -45,6 +45,7 @@
     <ProjectReference Include="..\EduUruk.Models\EduUruk.Models.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="wwwroot\NewTheem\" />
     <Folder Include="wwwroot\uploads\documents\" />
     <Folder Include="wwwroot\uploads\videos\" />
   </ItemGroup>

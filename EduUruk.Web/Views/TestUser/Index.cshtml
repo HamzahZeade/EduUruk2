@@ -1,0 +1,20 @@
+﻿@using EduUruk.Models.Entities;
+
+@{
+    Layout = "testLayout";
+}
+
+<main>
+    <div class="section">
+        <!-- Section 1: Computer Science -->
+        @foreach (var test in Model as List<Test>)
+        {
+            <a href="@Url.Action("QustionsTest", "TestUser", new { id = test.Id })" class="flashcard">
+                <h3>@test.Title</h3>
+                <p>Advanced Internet Computing</p>
+                <p>1302338</p>
+            </a>
+
+        }
+    </div>
+</main>
